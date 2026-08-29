@@ -10,7 +10,7 @@ proyecto de aprendizaje FullStack (React + Node.js + Express + MySQL).
 
 ## 📌 Estado del proyecto
 
-🚧 En desarrollo — backend conectado a MySQL. CRUD completo de productos, y ventas con creación transaccional (venta + detalle), consulta y eliminación. Próximo paso: completar ventas (actualizar/anular) y avanzar con clientes, pagos e inventario.
+🚧 En desarrollo — módulo de ventas completo (crear con descuento y validación de stock, consultar, anular con devolución de stock). Próximo paso: módulo de clientes.
 
 ## ✨ Funcionalidades
 

@@ -3,7 +3,7 @@ import {
   obtenerVentas,
   obtenerVentaID,
   crearVenta,
-  eliminarVenta,
+  anularVenta,
 } from "../controllers/ventas.controller.js";
 
 const router = Router();
@@ -11,6 +11,6 @@ const router = Router();
 router.get("/", obtenerVentas);
 router.get("/:id", obtenerVentaID);
 router.post("/", crearVenta);
-router.delete("/:id", eliminarVenta);
+router.patch("/:id/anular", anularVenta);
 
 export default router;
