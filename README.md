@@ -10,7 +10,7 @@ proyecto de aprendizaje FullStack (React + Node.js + Express + MySQL).
 
 ## 📌 Estado del proyecto
 
-🚧 En desarrollo — modelo de base de datos definido (10 tablas), listo para iniciar el Backend.
+🚧 En desarrollo — backend inicial con Express funcionando (CRUD de productos con datos simulados). Próximo paso: conexión con MySQL.
 
 ## ✨ Funcionalidades
 
