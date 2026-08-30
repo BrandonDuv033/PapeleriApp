@@ -10,7 +10,7 @@ proyecto de aprendizaje FullStack (React + Node.js + Express + MySQL).
 
 ## 📌 Estado del proyecto
 
-🚧 En desarrollo — módulos de productos, ventas y clientes completos y conectados a MySQL. Próximo paso: pagos e inventario.
+🚧 En desarrollo — módulos de productos, ventas y clientes completos y conectados a MySQL. Configurado ESLint para control de calidad de código. Próximo paso: pagos e inventario.
 
 ## ✨ Funcionalidades
 
@@ -44,6 +44,15 @@ papeleria-app/
 ├── docs/             → Requisitos y documentación del proyecto
 └── README.md
 ```
+
+## 🧪 Calidad de código
+
+Este proyecto usa **ESLint** para detectar errores mientras se programa.
+
+Para tenerlo funcionando en tu editor:
+
+1. Ejecuta `npm install` dentro de `backend/` (instala ESLint junto con las demás dependencias).
+2. Instala la extensión **ESLint** de Microsoft en VS Code.
 
 ## 📄 Documentación
 
