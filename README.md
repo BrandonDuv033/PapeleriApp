@@ -58,7 +58,7 @@ Para tenerlo funcionando en tu editor:
 
 - [Requisitos y reglas del negocio](docs/requisitos.md)
 - [Diagrama entidad-relación](database/diagrams)
-- [Script de creación de base de datos](database/database.sql)
+- [Script de creación de base de datos](database/scripts/database.sql)
 
 ## 🎯 Objetivo de aprendizaje
 
