@@ -11,3 +11,5 @@ router.post("/", crearServicioTercero);
 router.patch("/:id/completar", completarServicioTercero);
 router.get("/pendientes", obtenerServiciosPendientes);
 
+export default router;
+

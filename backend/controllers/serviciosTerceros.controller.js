@@ -63,19 +63,31 @@ export const completarServicioTercero = async (req, res) => {
   try {
     const id = Number(req.params.id);
     const [servicio] = await pool.query(
-      "SELECT * FROM servicios_terceros WHEN idServicios_tercero = ?",
+      "SELECT * FROM servicios_terceros WHERE idServicios_terceros = ?",
       [id],
     );
-    if (servicio.estado != "pendiente") {
-      return res.status(404).json({ mensaje: "Servicio ya completado" });
+
+    if (servicio.length == 0) {
+      return res.status(404).json({ mensaje: "Servicio inexistente" });
     }
+
+    if (servicio[0].estado != "pendiente") {
+      return res.status(400).json({ mensaje: "Servicio ya completado" });
+    }
+
+    await pool.query(
+      `UPDATE servicios_terceros 
+       SET estado = "completado", fecha_completado = NOW() 
+       WHERE idServicios_terceros = ?`,
+      [id],
+    );
+
+    res.status(200).json({ mensaje: "Servicio completado con éxito" });
   } catch (error) {
-    res
-      .status(500)
-      .json({
-        mensaje: "Error al completar servicio",
-        error: error.message,
-      });
+    res.status(500).json({
+      mensaje: "Error al completar servicio",
+      error: error.message,
+    });
   }
 };
 
