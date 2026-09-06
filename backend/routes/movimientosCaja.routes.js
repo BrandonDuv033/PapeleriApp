@@ -1,6 +1,8 @@
 import { Router } from "express";
 import { crearMovimientoCaja } from "../controllers/movimientosCaja.controller.js";
 
-const rout = Router();
+const router = Router();
 
-rout.get("/", crearMovimientoCaja);
+router.post("/", crearMovimientoCaja);
+
+export default router;

@@ -10,9 +10,11 @@ proyecto de aprendizaje FullStack (React + Node.js + Express + MySQL).
 
 ## 📌 Estado del proyecto
 
-🚧 En desarrollo — módulos de productos, ventas, clientes, pagos y
-servicios de terceros, alertas de stock completos y conectados a MySQL. Próximo paso:
-inventario (alertas de stock) y movimientos de caja.
+🚧 En desarrollo — módulos de productos, ventas, clientes, pagos,
+servicios de terceros e inventario (alertas de stock) completos y
+conectados a MySQL. Registro de movimientos de caja (apertura, cierre,
+ajuste) con conteo de denominaciones. Próximo paso: listar y editar
+movimientos de caja.
 
 ## ✨ Funcionalidades
 
