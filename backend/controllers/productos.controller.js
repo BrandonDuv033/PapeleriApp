@@ -87,3 +87,23 @@ export const eliminarProducto = async (req, res) => {
       .json({ mensaje: "Error al eliminar producto", error: error.message });
   }
 };
+
+export const obtenerAlertasStock = async (req, res) => {
+  try {
+    const [productos] = await pool.query(
+      "SELECT * FROM productos WHERE stock <= stock_minimo AND controla_inventario = 1 AND estado = 1",
+    );
+
+    if (productos.length === 0) {
+      return res
+        .status(200)
+        .json({ mensaje: "No hay productos con stock bajo" });
+    }
+    res.status(200).json({ mensaje: "Productos con stock bajo", productos });
+  } catch (error) {
+    res.status(500).json({
+      mensaje: "Error de conexión con el servidor",
+      error: error.message,
+    });
+  }
+};
